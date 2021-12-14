@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace BookTrackingApp.Controllers
 {
+    [ResponseCache(Duration = 4000)]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -21,7 +22,7 @@ namespace BookTrackingApp.Controllers
             _DbContext = context;
         }
 
-        // GET: HomeController
+        // GET: HomeController        
         public IActionResult Index()
         {
             List<BookModel> listOfCategoy = new List<BookModel>();

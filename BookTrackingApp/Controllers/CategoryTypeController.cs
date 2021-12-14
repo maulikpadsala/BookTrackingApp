@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BookTrackingApp.Controllers
 {
+    [ResponseCache(Duration = 4000)]
     public class CategoryTypeController : Controller
     {
         public BookTrackingDataContext _DbContext;

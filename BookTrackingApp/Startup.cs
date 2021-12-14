@@ -27,8 +27,8 @@ namespace BookTrackingApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BookTrackingApp;Trusted_Connection=True;MultipleActiveResultSets=true";
-            var connectionString = "Server=PINTU-DABHI;Database=BookTrackingApp;Trusted_Connection=True;MultipleActiveResultSets=true";
+            var connectionString = "Server=(localdb)\\mssqllocaldb;Database=BookTrackingApp;Trusted_Connection=True;MultipleActiveResultSets=true";
+            
 
             services.AddDbContext<BookTrackingDataContext>(options =>
             options.UseSqlServer(connectionString));
@@ -46,6 +46,7 @@ namespace BookTrackingApp
             });
 
             services.AddMemoryCache();
+            services.AddResponseCaching();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +65,7 @@ namespace BookTrackingApp
             app.UseHttpsRedirection();
 
             app.UseResponseCompression();
+            app.UseResponseCaching();
 
             app.UseStaticFiles();
 
