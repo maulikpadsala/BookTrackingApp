@@ -13,13 +13,13 @@ namespace BookTrackingApp.Models
         public int CategoryTypeId { get; set; }
 
         [Required]
-        [Column(TypeName = "NVARCHAR(500)")]
-        [MaxLength(500)]
+        [Column(TypeName = "NVARCHAR(250)")]
+        [MaxLength(250, ErrorMessage = "Minimum Length is 250")]
         public string Type { get; set; }
 
         [Required]
         [Column(TypeName = "NVARCHAR(250)")]
-        [MaxLength(500)]
+        [MaxLength(250, ErrorMessage = "Minimum Length is 250")]
         public string Name { get; set; }
 
 
