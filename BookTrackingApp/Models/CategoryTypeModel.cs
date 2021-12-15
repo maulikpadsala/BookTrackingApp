@@ -14,12 +14,12 @@ namespace BookTrackingApp.Models
 
         [Required]
         [Column(TypeName = "NVARCHAR(250)")]
-        [MaxLength(250, ErrorMessage = "Minimum Length is 250")]
+        [MaxLength(250, ErrorMessage = "Maximum Length is 250")]
         public string Type { get; set; }
 
         [Required]
         [Column(TypeName = "NVARCHAR(250)")]
-        [MaxLength(250, ErrorMessage = "Minimum Length is 250")]
+        [MaxLength(250, ErrorMessage = "Maximum Length is 250")]
         public string Name { get; set; }
 
 

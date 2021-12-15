@@ -15,7 +15,7 @@ namespace BookTrackingApp.Models
         [Required]
         [Display(Name ="Name Token")]
         [Column(TypeName = "NVARCHAR(250)")]
-        [MaxLength(250, ErrorMessage = "Minimum Length is 250")]
+        [MaxLength(250, ErrorMessage = "Maximum Length is 250")]
         public string NameToken { get; set; }
 
         [Required]        
